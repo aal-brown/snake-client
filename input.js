@@ -1,5 +1,3 @@
-const net = require("net");
-
 let connection;
 
 const handleUserInput = function(data) {

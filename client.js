@@ -1,10 +1,10 @@
 const net = require('net'); //Require the right module
-const constant = require('constants'); //Require the right module
+const { IP, PORT } = require('./constants'); //Require the right module
 
 const connect = function() {
   const conn = net.createConnection({ 
-    host: constant.IP,
-    port: constant.PORT
+    host: IP,
+    port: PORT
   });
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
