@@ -16,6 +16,8 @@ const setupInput = function(conn) {
     
   //Why cant we just use conn as is?
 
+  //
+
   connection = conn;
 
   stdin.on("data", (data) => {handleUserInput(data)});
@@ -37,6 +39,19 @@ const setupInput = function(conn) {
     if (key === "d") {
       conn.write("Move: right");
     }
+
+    if (key === "1") {
+      conn.write("Say: OM NOM");
+    }
+
+    if (key === "2") {
+      conn.write("Say: NOM NOM NOM");
+    }
+
+    if (key === "3") {
+      conn.write("Say: ...");
+    }
+
   });
 
   return stdin;
